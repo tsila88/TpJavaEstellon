@@ -17,8 +17,7 @@ public class CompositeStringFilter implements StringFilter {
 
 	public String filter(String string) {
 		// TODO Auto-generated method stub
-		// this.string = string;
-
+		
 		for (StringFilter filter : arrayFilter) {
 			filter.filter(string);
 		}
