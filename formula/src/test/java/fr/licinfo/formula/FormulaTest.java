@@ -32,12 +32,15 @@ public class FormulaTest {
 	public void testProduct() {
 
 		Variable var1 = new Variable("var1", 2.00);
-		Variable var2 = new Variable("var2", 25.78);
+		Variable var2 = new Variable("var2", 25.00);
+		Variable var3 = new Variable("var3", 3.00);
+		Variable var4 = new Variable("var4", 52.00);
 		// Variable var3 = new Variable("var3",21.3);
-		Formula[] v = {var1,var2};
-		Formula formula1 = new Product(v);
-		assertThat(formula1.asString(), hasToString("(var1*var2)"));
-		assertThat(formula1.asValue(), equalTo(2 * 25.78));
+		Formula[] f = {var1,var2};
+		Formula[] f1 = {var3,var4};
+		Formula formula1 = new Product(f,f1);
+		assertThat(formula1.asString(), hasToString("(var1*var2)*(var3*var4)"));
+		assertThat(formula1.asValue(), equalTo(2*25.00*3*52.00));
 
 	}
 
@@ -46,23 +49,34 @@ public class FormulaTest {
 
 		Variable var1 = new Variable("var1", 2.00);
 		Variable var2 = new Variable("var2", 25.78);
-		Formula[] v = {var1,var2};
-		Formula formula1 = new Sum(v);
-		assertThat(formula1.asString(), hasToString("(var1+var2)"));
-		assertThat(formula1.asValue(), equalTo(2 + 25.78));
+		Variable var3 = new Variable("var3", 3.00);
+		Variable var4 = new Variable("var4", 52.78);
+		// Variable var3 = new Variable("var3",21.3);
+		Formula[] f = {var1,var2};
+		Formula[] f1 = {var3,var4};
+		Formula formula1 = new Sum(f,f1);
+		assertThat(formula1.asString(), hasToString("(var1+var2)+(var3+var4)"));
+		assertThat(formula1.asValue(), equalTo(2 + 25.78+3+52.78));
+
+		//Formula formula1 = new Sum(v);
+		
 
 	}
 
 	@Test
 	public void testComplexFormula() {
 
-		Variable var1 = new Variable("var1", 2.00);
-		Variable var2 = new Variable("var2", 25.78);
-		Variable var3 = new Variable("var3", 81.45);
-		Variable[] v = {var1,var2,var3};
-		Formula formula1 = new Sum(v);
+//		Variable var1 = new Variable("var1", 2.00);
+//		Variable var2 = new Variable("var2", 25.78);
+//		Variable var3 = new Variable("var3", 81.45);
+//		Variable[] v1 = {var1,var2,var3};
+//		Formula formula1 = new Sum(v1);
+//		Formula formula2 = new Product(v1);
+//		Formula formula3 = new Sum(formula2);
+//		Formula formula4 = new Sum(v1);
+//		assertThat(formula1.asValue(), equalTo(2 + 25.78 + 81.45));
+//		
 		
-//		Formula formula2 = new Product(var1, new Sum(var2, var3));
 ////		Formula formula3 = new Sum(new Product(var1, var3), new Sum(var2, var3));
 //		assertThat(formula1.asString(), hasToString("(var1+(var2+var3))"));
 //		assertThat(formula1.asValue(), equalTo(2 + 25.78 + 81.45));

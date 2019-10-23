@@ -1,0 +1,5 @@
+fr\amu\models\FoodDAOTests.class
+fr\amu\services\FoodServiceTests.class
+fr\amu\ApplicationTests.class
+fr\amu\controllers\FoodControllerTests.class
+fr\amu\controllers\IndexControllerTests.class

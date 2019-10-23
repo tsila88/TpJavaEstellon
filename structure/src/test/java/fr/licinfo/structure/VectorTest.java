@@ -157,6 +157,7 @@ public class VectorTest {
 	    vector.add(10);
 	   
 	    assertThat(vector.capacity(),equalTo(10));
+	    assertThat(vector.size(),equalTo(10));
 	    assertThat(vector.get(0), equalTo(1));
 	    assertThat(vector.get(1), equalTo(2));
 	    assertThat(vector.get(2), equalTo(3));
@@ -173,6 +174,7 @@ public class VectorTest {
 	   assertThat(vector.pop(), equalTo(9));
 	   assertThat(vector.pop(), equalTo(8));
 	   assertThat(vector.pop(), equalTo(7));
+	   assertThat(vector.capacity(), equalTo(6));
 
 	  
 	  

@@ -1,14 +1,20 @@
 package fr.licinfo.formula;
-
-
 public class Minimum implements Formula {
 
 	private Variable tabVar[];
-	private String name;
+
 	
+	public Variable[] getTabVar() {
+		return tabVar;
+	}
+
+	public void setTabVar(Variable[] tabVar) {
+		this.tabVar = tabVar;
+	}
+
 	public String asString() {
 		// TODO Auto-generated method stub
-		return "min="+this.name ;
+		return "min="+this.asValue() ;
 	}
 
 	public double asValue() {
@@ -21,5 +27,8 @@ public class Minimum implements Formula {
 		}
 		return min.asValue();
 	}
+	
+	
+	
 	
 }

@@ -88,7 +88,8 @@ public class Vector {
 	 * @param element
 	 */
 	public void add(int element) {
-
+		
+		this.size ++;
 		for (int i = 0; i < this.capacity(); i++) {
 			if (elements[i] instanceof Integer) {
 				// Ne rien faire
@@ -123,6 +124,9 @@ public class Vector {
 		}
 		
 		return size;
+		
+//		size--;
+//		return elements[size];
 
 	}
 

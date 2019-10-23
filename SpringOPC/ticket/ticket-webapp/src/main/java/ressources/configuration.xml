@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+	<!-- ===== Déclaration des DAO ===== -->
+	<bean id="projetDao"
+		class="org.example.demo.ticket.consumer.impl.dao.ProjetDaoImpl">
+		<property name="utilisateurDao" ref="utilisateurDao" />
+	</bean>
+
+	<bean id="utilisateurDao"
+		class="org.example.demo.ticket.consumer.impl.dao.UtilisateurDaoImpl" />
+
+
+	<!-- ===== DaoFactory ===== -->
+	<bean id="daoFactory"
+		class="org.example.demo.ticket.consumer.impl.dao.DaoFactoryImpl">
+		<property name="projetDao" ref="projetDao" />
+		<property name="utilisateurDao" ref="utilisateurDao" />
+	</bean>
+
+	<!-- ===== Déclaration des Managers ===== -->
+	<bean id="projetManager"
+		class="org.example.demo.ticket.business.impl.manager.ProjetManagerImpl">
+		<property name="daoFactory" ref="daoFactory" />
+	</bean>
+	<bean id="ticketManager"
+		class="org.example.demo.ticket.business.impl.manager.TicketManagerImpl">
+		<property name="daoFactory" ref="daoFactory" />
+	</bean>
+
+	<!-- ===== ManagerFactory ===== -->
+	<bean id="managerFactory"
+		class="org.example.demo.ticket.business.impl.ManagerFactoryImpl">
+		<property name="projetManager" ref="projetManager" />
+		<property name="ticketManager" ref="ticketManager" />
+	</bean>
+</beans>
