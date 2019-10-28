@@ -1,0 +1,156 @@
+{
+	"id": "9d0bf966-0579-488f-ba2b-cf2eeb4dce28",
+	"name": "TestsPostman",
+	"allTests": [],
+	"timestamp": "2019-10-28T14:31:22.456Z",
+	"collection_id": "9ddcb451-c9bd-49c3-8842-85c1cec95776",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "9ddcb451-c9bd-49c3-8842-85c1cec95776",
+		"name": "TestsPostman",
+		"order": [
+			"9b53c4c8-9404-48cf-a33d-0a79d570c324",
+			"d548bc59-e54a-488e-b64f-e91b9e76627b",
+			"06979f3e-2d55-4b5f-b1c2-789f92a12454"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": null,
+	"results": [
+		{
+			"name": "calculerMargeProduit",
+			"id": "9b53c4c8-9404-48cf-a33d-0a79d570c324",
+			"url": "localhost:9090/AdminProduits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "trierProduitsParOrdreAlphabetique",
+			"id": "d548bc59-e54a-488e-b64f-e91b9e76627b",
+			"url": "localhost:9090/ProduistParOrdreAlphabetique",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "Validation prix de vente",
+			"id": "06979f3e-2d55-4b5f-b1c2-789f92a12454",
+			"url": "localhost:9090/Produits",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 19,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "calculerMargeProduit",
+			"id": "9b53c4c8-9404-48cf-a33d-0a79d570c324",
+			"url": "localhost:9090/AdminProduits",
+			"time": "2019-10-28T14:31:22.456Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "trierProduitsParOrdreAlphabetique",
+			"id": "d548bc59-e54a-488e-b64f-e91b9e76627b",
+			"url": "localhost:9090/ProduistParOrdreAlphabetique",
+			"time": "2019-10-28T14:31:22.456Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		},
+		{
+			"name": "Validation prix de vente",
+			"id": "06979f3e-2d55-4b5f-b1c2-789f92a12454",
+			"url": "localhost:9090/Produits",
+			"time": "2019-10-28T14:31:22.456Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}
