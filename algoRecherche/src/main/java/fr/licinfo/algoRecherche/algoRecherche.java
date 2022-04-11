@@ -3,7 +3,7 @@ package fr.licinfo.algoRecherche;
 public class algoRecherche {
 
 	public algoRecherche() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/*****
